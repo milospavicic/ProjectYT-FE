@@ -159,28 +159,27 @@
                     </div>
                     <div class="videoInfo">
                         <h4>Phasellus sapien risus, suscipit ut faucibus in, posuere vitae est. Mauris sit amet est finibus, vehicula velit nec, maximus tellus.</h4>
-                        <p class="viewsCounter">Views:111111111111111</p>
-                        <div class="btn-group" id="options">
-                            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-share-alt"></span> Share</button>
-                            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
-                            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-option-horizontal"></span></button>
+                        <div class="viewsAndButton">
+                            <p class="viewsCounter">Views:1000000000</p>
                         </div>
-                        <div class="btn-group" id="ldBtnGroup">
-                            <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-thumbs-up"></span></button>
-                            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-down"></span></button>
+
+                        <div class="viewsAndButton" id="buttonsDiv">
+                            <div class="btn-group" id="ldBtnGroup">
+                                <button type="button" id="likeButton" class="btn btn-danger"><span class="glyphicon glyphicon-thumbs-up"></span> 100</button>
+                                <button type="button" id="dislikeButton" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-down"></span> 100</button>
+                            </div>
+                            <div class="btn-group" id="optionsBtnGroup">
+                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-share-alt"></span> Share</button>
+                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-option-horizontal"></span></button>
+                            </div>
                         </div>
-                        <br>
+
                         <div class="description">
-                            <a href="#">
-                                <img src="pictures/1.jpg" alt="Lights" style="width:70px;height: 70px">
-                            </a>
+                            <a href="#"><img src="pictures/1.jpg" alt="Lights" style="width:70px;height: 70px"></a>
                             <ul id="nameAndDate">
-                                <li>
-                                    <a href="#" >Test Name</a>
-                                </li>
-                                <li>
-                                    <p>Published on 22.2.2222.</p>
-                                </li>
+                                <li><a href="#" >Test Name</a></li>
+                                <li><p>Published on<br>22.2.2222.</p></li>
                             </ul>
                             <button id="btnFollow" type="button" class="btn btn-danger">Follow</button>
                             
@@ -195,28 +194,40 @@
                             <select id="commSelect" onchange="refreshComments()">
                                 <option value="10">10 comments</option>
                                 <option value="20">20 comments</option>
-                                <option value="25">25 comments</option>
+                                <option value="25">50 comments</option>
                             </select>
                         </div>
-                        <div class="commentRow">
-                            <!--
-                            <div class="col-md-12 col-sm-12">
-                                <div class="thumbnail" id="comment">
-                                    <p id="commentOwner">Name</p>
-                                    <p id="commentDate">Posted on:</p>
-                                    <div class="commentText">
-                                        <p>audantium enim quasi est quid em magnam voluptate ipsam eosntempora quo necessitatibusndolor</p>
-                                    </div>
-                                    
-                                    <button type="button" class="btn btn-default">Reply</button>
-                                    <p>123</p>
-                                    <div class="btn-group" id="commLDBtnGroup">
-                                        <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-thumbs-up"></span></button>
-                                        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-down"></span> </button>
-                                    </div>
+                        <div id="centerButtons">
+                            <button id="myCommentButton" type="button" class="btn btn-danger" data-toggle="collapse" data-target="#myComment" >Comment</button>
+                            <button id="hideShowBtn" type="button" class="btn btn-danger" data-toggle="collapse" data-target="#commentSection">Show Comments</button>
+                        </div>
+
+                        <div class="collapse" id="myComment">
+                            <textarea id="myCommentText" rows="4" cols="50"></textarea>
+                            <button id="myFormButton" class="btn btn-default">Submit</button>
+                        </div>
+                        
+                        <div class="collapse" id="commentSection">
+                            <div class="commentRow">
+                                <!--
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="thumbnail" id="comment">
+                                        <p id="commentOwner">Name</p>
+                                        <p id="commentDate">Posted on:</p>
+                                        <div class="commentText">
+                                            <p>audantium enim quasi est quid em magnam voluptate ipsam eosntempora quo necessitatibusndolor</p>
+                                        </div>
+
+                                        <button type="button" class="btn btn-default">Reply</button>
+                                        <p>123</p>
+                                        <div class="btn-group" id="commLDBtnGroup">
+                                            <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+                                            <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-thumbs-down"></span> </button>
+                                        </div>
                                 </div>  
                             </div>
-                            -->
+                                -->
+                            </div> 
                         </div>
                     </div>
                 </div>

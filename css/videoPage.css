@@ -1,6 +1,6 @@
 .mainDiv{
     width: 95%;
-    margin-top: 6%;
+    margin-top: 70px;
     display: inline-block;
     text-align: left; 
 }
@@ -23,36 +23,45 @@
 .videoAndControl iframe{
     border-radius: 5px;
 }
+
+
+@media only screen and (max-width: 815px) {
+    .videoAndControl iframe{
+        height: 350px;
+    }
+}
+@media only screen and (max-width: 620px) {
+    .videoAndControl iframe{
+        height: 300px;
+    }
+}
+@media only screen and (max-width: 560px) {
+    .videoAndControl iframe{
+        height: 250px;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .videoAndControl iframe{
+        height: 225px;
+    }
+}
+
 .videoInfo h4,p{
-    margin-left: 1%;
     margin-top: 7px;
 }
-.statsBar{
-    margin-top: 1%;
+.videoInfo{
+    margin-left: 1%;
 }
+
 .statsBar{
     display:inline-block;
     vertical-align: middle;
     clear: right;
 }
-.viewsCounter{
-    display:inline-block;
-    vertical-align: b;
-    clear: right; 
-}
-#ldBtnGroup{
-    margin-right: 10px;
-    float: right;
-    display:inline-block;
-    vertical-align: middle;
-}
-#options{
-    float: right;
-    display:inline-block;
-    vertical-align: middle;
-}
+
 .description{
     margin-top: 15px;
+    margin-bottom: 50px;
 }
 .description a img{
     float: left;
@@ -69,29 +78,37 @@
 #nameAndDate{
     float: left;
     list-style: none;
+    margin 0;
+    padding:0;
 }
 #nameAndDate a{
     font-weight: bold;
     text-decoration: none;
-    color: black; 
-    
-}
-#nameAndDate{
-    text-decoration: none;
-    list-style: none;
-    margin 0;
-    padding:0;
+    color: black;    
 }
 .description button{
-    width: 12.5%;
+    width: 120px;
     float: right;
     margin-top: 30px;
 }
 
+.viewsAndButton{
+    display: inline-block;
+    vertical-align: middle; 
+}
+#buttonsDiv{
+    float: right;
+}
+@media only screen and (max-width: 340px) {
+    #buttonsDiv{
+        float: left;
+        margin-bottom: 15px;
+    }
+}
+
 #commentsDiv{
-    height: 800px;
+    max-height: 760px;
     overflow: scroll;
-    margin-bottom: 10%;
     width: 100%;
     border-radius: 5px;
 }
@@ -100,13 +117,11 @@
     text-align: center;
 }
 @media only screen and (max-width: 990px) {
-    #commHeader{
-        margin-left: 5%;
-        text-align: left;
-    }
     #commentsDiv{
+        max-height: none;
         height: auto;
         overflow: auto;
+        margin-bottom: 40px;
     }
 }
 
@@ -120,18 +135,41 @@
 }
 #comment{
     width: 100%;
-    margin: 2px auto;
+    margin: 0 auto;
+    margin-bottom: 7px;
 }
 #comment>p{
     display:inline-block;   
 }
 #commentOwner{
     font-weight: 600;
+    margin-right: 5px;
 }
 #commentDate{
     font-size: 10px; 
     color: dimgrey;
 }
-#commLDBtnGroup{
-    margin-left: 5px;
+#likes{
+    margin: 0 5px;
+}
+#myCommentText{
+    max-width: 90%;
+    display:block;
+    margin: 0 auto;
+    width: 90%;
+    margin: 10px auto;
+}
+#myFormButton{
+    display:block;
+    margin: 0 auto 10px auto;
+}
+
+#myCommentButton,#hideShowBtn{
+    display: inline-block;
+    vertical-align: middle;
+}
+#centerButtons{
+    display: block;
+    text-align: center;
+    margin: 5px 0;
 }

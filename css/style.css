@@ -1,22 +1,8 @@
-body{
-    text-align: center;
-}
-#mainDiv{
+.mainDiv{
     width: 60%;
     margin-top: 5%;
     display: inline-block;
     text-align: left;
-}
-.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   text-align: left;
-}
-.footer p{
-    margin-top: 5px;
-    font-size: 12;
 }
 .col-md-4 a{
     color:black;
@@ -25,52 +11,65 @@ body{
 .row{
     margin-top: 20px;
 }
-#navbarLoggedIn{
-    display: none;
+.rowHeader h3,h4{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 80px;
+    margin:0;
+    padding:0;
 }
-#navbarNotLoggedIn{
-   //*display: none;*//
+.mainDiv h5{
+    float: right;
+    margin-bottom: 50px;
 }
-#lightTheme{
-    display: none;
-}
-body.darker{
-    background-color: #212121;
-    color: #b2b0b0;
-}
-.navbar-fixed-top.darker {
-    background-color: #3a3a3a;
-    border-bottom-color: red;
-    transition: all 200ms linear;
-    transition: color .2s linear;
-    
-}
-.active.darker a{
-    color: red !important;
-    background-color: #3a3a3a!important;
-}
-hr.darker{
-    border-color:red;  
-}
-
-.form-control.darker{
-    background-color: #212121;
-    border-color: red;
-}
-.col-md-4.darker a{
-    color: #b2b0b0;
+.mainDiv h5 a{
+    color: black;
     text-decoration: none;
 }
-.col-md-4 a #viewsP{
-    color: #777676;
+#stats{
+    color: dimgrey;
+    font-size: 12px;
 }
-.dropdown-menu.darker li{
-    background-color: #212121;
+#titleBar{
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 15px;
 }
-.dropdown-menu.darker li a:hover{
-    background-color: #848383;
+#imgFormat{
+    height: 30vh;
 }
-.dropdown-menu.darker li a{
-    color:#b2b0b0; 
-    
+@media only screen and (max-width: 1200px) {
+    #imgFormat{
+        height: 22vh;
+    }
+}
+@media only screen and (max-width: 990px) {
+    #imgFormat{
+        height: 50vh;
+    }
+}
+@media only screen and (max-width: 750px) {
+    #imgFormat{
+        height: 40vh;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #imgFormat{
+        height: 35vh;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #imgFormat{
+        height: 30vh;
+    }
+}
+@media only screen and (max-width: 400px) {
+    #imgFormat{
+        height: 25vh;
+    }
+}
+@media only screen and (max-width: 320px) {
+    #imgFormat{
+        height: 20vh;
+    }
 }

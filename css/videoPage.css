@@ -1,0 +1,132 @@
+.mainDiv{
+    width: 95%;
+    margin-top: 6%;
+    display: inline-block;
+    text-align: left; 
+}
+.mainDiv h3{
+    margin: 0;
+    padding: 0;
+}
+.controlBar{
+    width: 100%;
+    height: 20px;
+    background-color: red;
+    border-radius: 5px;
+}
+.videoAndControl {
+    width: 100%;
+    border-radius: 5px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+.videoAndControl iframe{
+    border-radius: 5px;
+}
+.videoInfo h4,p{
+    margin-left: 1%;
+    margin-top: 7px;
+}
+.statsBar{
+    margin-top: 1%;
+}
+.statsBar{
+    display:inline-block;
+    vertical-align: middle;
+    clear: right;
+}
+.viewsCounter{
+    display:inline-block;
+    vertical-align: b;
+    clear: right; 
+}
+#ldBtnGroup{
+    margin-right: 10px;
+    float: right;
+    display:inline-block;
+    vertical-align: middle;
+}
+#options{
+    float: right;
+    display:inline-block;
+    vertical-align: middle;
+}
+.description{
+    margin-top: 15px;
+}
+.description a img{
+    float: left;
+    margin: 0;
+    padding: 0;
+    margin: 0 1%;
+    border-radius: 10px;
+}
+.description p{
+    clear: left;
+}
+#nameAndDate{
+    float: left;
+    list-style: none;
+}
+#nameAndDate a{
+    font-weight: bold;
+    text-decoration: none;
+    color: black; 
+    
+}
+#nameAndDate{
+    text-decoration: none;
+    list-style: none;
+    margin 0;
+    padding:0;
+}
+.description button{
+    width: 12.5%;
+    float: right;
+    margin-top: 30px;
+}
+
+
+
+#commentsDiv{
+    overflow: auto;
+    margin-bottom: 10%;
+    width: 100%;
+    border-radius: 5px;
+}
+#commHeader{
+    width: 100%;
+    text-align: center;
+}
+@media only screen and (max-width: 990px) {
+    #commHeader{
+        margin-left: 5%;
+        text-align: left;
+    }
+}
+
+#comm{
+    display:inline-block;
+    vertical-align: middle;
+}
+#commSelect{
+    display:inline-block;
+    vertical-align: middle;
+}
+#comment{
+    width: 100%;
+    margin: 2px auto;
+}
+#comment>p{
+    display:inline-block;   
+}
+#commentOwner{
+    font-weight: 600;
+}
+#commentDate{
+    font-size: 10px; 
+    color: dimgrey;
+}
+#commLDBtnGroup{
+    margin-left: 5px;
+}

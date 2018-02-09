@@ -63,6 +63,8 @@
 }
 .description p{
     clear: left;
+    max-height: 100px;
+    overflow-y: scroll;
 }
 #nameAndDate{
     float: left;
@@ -86,10 +88,9 @@
     margin-top: 30px;
 }
 
-
-
 #commentsDiv{
-    overflow: auto;
+    height: 800px;
+    overflow: scroll;
     margin-bottom: 10%;
     width: 100%;
     border-radius: 5px;
@@ -102,6 +103,10 @@
     #commHeader{
         margin-left: 5%;
         text-align: left;
+    }
+    #commentsDiv{
+        height: auto;
+        overflow: auto;
     }
 }
 

@@ -51,36 +51,36 @@
                     </ul>
                   
                     <ul class="nav navbar-nav navbar-right" id="navbarLoggedIn">
-                        <li><a href="#"><span class="glyphicon glyphicon-upload"></span></a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-upload"></span> Upload</a></li>
                         <li class="dropdown" id="test">
                             <!-- Link koji otvara dropdown listu -->
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="userNameTab"></a>
                             <!-- Lista koja se pojavljuje i sakriva na klik -->
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" id="mainDropdown">
+                                <li><a href="#" target="_blank" id="users"><span class="glyphicon glyphicon-user"></span> Users</a></li>
                                 <li><a href="#" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> My Channel</a></li>
                                 <li><a href="#" target="_blank"><span class="glyphicon glyphicon-time"></span> History</a></li>
                                 <li><a href="#" target="_blank"><span class="glyphicon glyphicon-thumbs-up"></span> Liked</a></li>
                                 <li><a data-toggle="collapse" href="#playlists" id="playlistCollapse"><span class="glyphicon glyphicon-th-list"></span> Playlists<span class="caret"></span></a>
                                     <ul id="playlists" class="panel-collapse collapse itemInListCollapse">
-                                        <li ><a href="#">Javascript step by step</a></li>
-                                        <li><a href="#">Pop 80's</a></li>
-                                        <li><a href="#">Fails Playlist</a></li>
-                                        <li><a href="#">Ex Yu Rock</a></li>
-                                        <li><a href="#">Summer hits 2018</a></li>
-                                        <li><a href="#">TedX</a></li>
+                                        <li class="list-group-item"><a href="#">Javascript step by step</a></li>
+                                        <li class="list-group-item"><a href="#">Pop 80's</a></li>
+                                        <li class="list-group-item"><a href="#">Fails Playlist</a></li>
+                                        <li class="list-group-item"><a href="#">Ex Yu Rock</a></li>
+                                        <li class="list-group-item"><a href="#">Summer hits 2018</a></li>
+                                        <li class="list-group-item"><a href="#">TedX</a></li>
                                     </ul>
                                 </li>
                                 <li><a data-toggle="collapse" href="#following" id="followingCollapse"><span class="glyphicon glyphicon-king"> </span> Following<span class="caret"></span></a>
-                                    <ul id="following" class="panel-collapse collapse itemInListCollapse">
-                                        <li><a href="#">thenewboston</a></li>
-                                        <li><a href="#">Eminem</a></li>
-                                        <li><a href="#">AC/DC</a></li>
-                                        <li><a href="#">LifeHacks</a></li>
-                                        <li><a href="#">FailArmy</a></li>
-                                        <li><a href="#">Eminem</a></li>
+                                    <ul id="following" class="panel-collapse collapse itemInListCollapse list-group">
+                                        <li class="list-group-item"><a href="#">thenewboston</a></li>
+                                        <li class="list-group-item"><a href="#">Eminem</a></li>
+                                        <li class="list-group-item"><a href="#">AC/DC</a></li>
+                                        <li class="list-group-item"><a href="#">LifeHacks</a></li>
+                                        <li class="list-group-item"><a href="#">FailArmy</a></li>
+                                        <li class="list-group-item"><a href="#">Eminem</a></li>
                                     </ul>
-                                </li>
-                                <li><a href="#" target="_blank" id="users"><span class="glyphicon glyphicon-user"></span> Users</a></li>
+                                </li>   
                             </ul>
                         </li>
                               
@@ -184,7 +184,7 @@
                             </ul>
                             <button id="btnFollow" type="button" class="btn btn-danger">Follow</button>
                             
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis est lectus, luctus nec est vitae, hendrerit volutpat dui. Vivamus in lacinia elit. Pellentesque convallis congue tempor. Phasellus luctus arcu ac risus tempor, id scelerisque lacus lacinia. Maecenas a dolor maximus, rutrum augue ut, sodales augue. Vestibulum id tellus non erat interdum volutpat hendrerit a ante. Donec eget dui eget enim condimentum scelerisque.
+                            <p class="thumbnail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis est lectus, luctus nec est vitae, hendrerit volutpat dui. Vivamus in lacinia elit. Pellentesque convallis congue tempor. Phasellus luctus arcu ac risus tempor, id scelerisque lacus lacinia. Maecenas a dolor maximus, rutrum augue ut, sodales augue. Vestibulum id tellus non erat interdum volutpat hendrerit a ante. Donec eget dui eget enim condimentum scelerisque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis est lectus, luctus nec est vitae, hendrerit volutpat dui. Vivamus in lacinia elit. Pellentesque convallis congue tempor. Phasellus luctus arcu ac risus tempor, id scelerisque lacus lacinia. Maecenas a dolor maximus, rutrum augue ut, sodales augue. Vestibulum id tellus non erat interdum volutpat hendrerit a ante. Donec eget dui eget enim condimentum scelerisque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis est lectus, luctus nec est vitae, hendrerit volutpat dui. Vivamus in lacinia elit. Pellentesque convallis congue tempor. Phasellus luctus arcu ac risus tempor, id scelerisque lacus lacinia. Maecenas a dolor maximus, rutrum augue ut, sodales augue. Vestibulum id tellus non erat interdum volutpat hendrerit a ante. Donec eget dui eget enim condimentum scelerisque.</p>
                         </div>
                     </div>
                 </div>

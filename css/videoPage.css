@@ -173,3 +173,15 @@
     text-align: center;
     margin: 5px 0;
 }
+#recommendedVideos .row{
+    
+    max-height: auto;
+    margin: 0 auto 50px auto;
+    
+}
+#recommendedVideos .row a{
+    
+    text-decoration: none;
+    color: black;
+    
+}

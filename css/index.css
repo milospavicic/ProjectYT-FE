@@ -18,13 +18,15 @@
     margin:0;
     padding:0;
 }
-.mainDiv h5{
+.mainDiv h4{
     float: right;
-    margin-bottom: 50px;
+    margin: 0;
+    padding:0;
 }
-.mainDiv h5 a{
+.mainDiv h4 a{
     color: black;
     text-decoration: none;
+    
 }
 #stats{
     color: dimgrey;
@@ -72,4 +74,12 @@
     #imgFormat{
         height: 20vh;
     }
+}
+#popularChannels{
+    margin-bottom: 45px;
+}
+hr{
+    clear: right;
+    margin: 0;
+    padding: 0;
 }

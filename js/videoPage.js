@@ -1,5 +1,6 @@
 $(document).ready(function(e) {
     loadComments();
+    showPopularChannels();
     
     $('#likeButton').click(function() {
         if($('#dislikeButton').prop('disabled')==true){
@@ -61,4 +62,36 @@ function loadComments(){
 function refreshComments() {
     loadComments();
 }
+function randomDate(start, end) {
+    var newDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+    return newDate.getDate()+"."+(newDate.getMonth()+1)+"."+newDate.getFullYear()+".";
+}
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+function showPopularChannels(){
+    $.ajax({
+        url: 'https://jsonplaceholder.typicode.com/photos',
+		type: 'GET',
+		dataType: 'json',
+		success: function(response) {
+
+			// Uzimamo samo prvih 50 slika
+			for(var i=0; i<6; i++) {
+				var slika = response[i];
+                var title = capitalizeFirstLetter(slika.title.substring(0, 25));
+                var views = 'Views: '+Math.floor(Math.random() * 100000);
+                var newDate = 'Posted on: '+randomDate(new Date(2010, 0, 1), new Date());
+                var newDiv = $('<div class="col-md-2 col-sm-4 col-xs-6"><a href="videoPage.html?id=1" target="_self"><img id="imgFormat" src="'+slika.thumbnailUrl+'" alt="video" style="width:100%"><div class="caption"><p id="titleBar">'+title+'</p></div><p id="stats">User<br>'+views+'<br>'+newDate+'</p></a></div>');
+
+
+				$('#recommendedVideos .row').append(newDiv);
+			}
+		},
+		error: function(request, message, error) {
+			alert('GRESKA: ' + error);
+		}
+	});
+}
+
 

@@ -7,10 +7,10 @@
       <script src="js/jquery-2.1.4.min.js"></script>
       <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
       <script src="bootstrap/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" type="text/css" href="css/index.css">
+      <link rel="stylesheet" type="text/css" href="css/trendingPage.css">
       <link rel="stylesheet" type="text/css" href="css/nav.css">
       <script src="js/nav.js" type="text/javascript"></script>
-      <script src="js/index.js" type="text/javascript"></script>
+      <script src="js/trendingPage.js" type="text/javascript"></script>
     </head>
   
     <body>
@@ -150,30 +150,14 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="badRegisterModal" role="dialog">
-            <div class="modal-dialog modal-sm">
-                  <!-- Modal content-->
-                <div class="modal-content">
-                      <div class="modal-header">
-                          <h4 id="registerErrorTitle" class="modal-title">Register.</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p id="registerErrorMessage">All fields must be filled!</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="modal fade" id="badLoginModal" role="dialog">
-            <div class="modal-dialog modal-sm">
+            <div class="modal-dialog" >
                   <!-- Modal content-->
                 <div class="modal-content">
                       <div class="modal-header">
                           <h4 class="modal-title">Login failed.</h4>
                     </div>
-                    <div id="loginErrorMessage" class="modal-body">
+                    <div class="modal-body">
                         <p>Wrong username or password.</p>
                     </div>
                     <div class="modal-footer">
@@ -197,24 +181,77 @@
             </div>
         </div>
         <div class="mainDiv">
-            <div id="recommendedDiv">
-                <h3>Most recent</h3>     
-                <div class="row">
-                    
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                Sports
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                Music
+                            </a>
+                        </h4>
+
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                Science
+                            </a>
+                        </h4>
+                
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                News
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                                Live
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFive" class="panel-collapse collapse">
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                                Virtual Reality
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSix" class="panel-collapse collapse">
+                    </div>
                 </div>
             </div>
-            <h4><a href="#">See more</a></h4>
-            <hr>
-            <div id="popularChannels">
-                <h3>Most Popular Channels</h3>     
-                <div class="rowOne">
-                    
-                </div>
-                <h3>Fastest Growing Channels</h3> 
-                <div class="rowTwo">
-                    
-                </div>
-            </div>
+            
         </div>
         <footer class="footer btn-danger text-light">
               <p>Copyright ©, Made by Milos Pavicic   </p>

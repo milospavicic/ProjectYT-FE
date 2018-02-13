@@ -1,6 +1,13 @@
+body { 
+        background: url('../pictures/background.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
 body{
     position: relative;
-    text-align: center;    
+    text-align: center;   
 }
 .btn-danger{
     background-color: red;
@@ -8,6 +15,7 @@ body{
 .container-fluid{
     text-align: left;
 }
+
 footer {
     margin-top: 5%;
     position: absolute;
@@ -20,13 +28,30 @@ footer p{
     margin-left: 5%;
     margin-top: 7px;
     font-size: 12;
+    color: white;
 }
+
 #navbarLoggedIn{
     display: none;
 }
 #navbarNotLoggedIn{
     display: block;
 }
+#login-modal{
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+}
+#login-modal input{
+    max-width: auto;
+    
+}
+#login-modal .modal-footer p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+
 .loginWindow.visible{
     display: inline;
 }
@@ -53,7 +78,7 @@ footer p{
     /* top staviti u media */
     margin-bottom: 5%;
 }
-#badLoginModal,#logoutModal{
+#badLoginModal,#logoutModal,#badRegisterModal{
     text-align: left;
     width: 80%;
     margin: 0 auto;
@@ -97,7 +122,7 @@ footer p{
 ::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
     background: transparent; 
-    
+}
 /*
 RESENO SA margin: 0;
 
@@ -111,3 +136,51 @@ RESENO SA margin: 0;
     }
 }
 */
+#searchBarNav{
+    margin-left: 35px;
+    width: 400%;
+}
+@media only screen and (max-width: 1400px) {
+    #searchBarNav{
+        width: 350%;
+        
+    }
+}
+@media only screen and (max-width: 1300px) {
+    #searchBarNav{
+        margin-left: 15px;
+        
+    }
+}
+@media only screen and (max-width: 1230px) {
+    #searchBarNav{
+        margin-left: 0px;
+        width: 350%;
+        
+    }
+}
+@media only screen and (max-width: 1160px) {
+    #searchBarNav{
+        width: 300%;
+    }
+}
+@media only screen and (max-width: 1080px) {
+    #searchBarNav{
+        width: 250%;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    #searchBarNav{
+        width: 200%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    #searchBarNav{
+        width: 150%;
+    }
+}
+@media only screen and (max-width: 830px) {
+    #searchBarNav{
+        width: 100%;
+    }
+}

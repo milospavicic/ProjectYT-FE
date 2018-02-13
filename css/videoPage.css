@@ -3,6 +3,8 @@
     margin-top: 70px;
     display: inline-block;
     text-align: left; 
+    margin-bottom: 30px;
+    min-height: 800px;
 }
 .mainDiv h3{
     margin: 0;
@@ -13,6 +15,7 @@
     height: 20px;
     background-color: red;
     border-radius: 5px;
+    
 }
 .videoAndControl {
     width: 100%;
@@ -22,6 +25,9 @@
 }
 .videoAndControl iframe{
     border-radius: 5px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -5px;
 }
 
 
@@ -61,7 +67,7 @@
 
 .description{
     margin-top: 15px;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
 }
 .description a img{
     float: left;
@@ -74,6 +80,9 @@
     clear: left;
     max-height: 100px;
     overflow-y: scroll;
+}
+#textDescription{
+    margin-right: 1%;
 }
 #nameAndDate{
     float: left;
@@ -95,6 +104,7 @@
 .viewsAndButton{
     display: inline-block;
     vertical-align: middle; 
+    margin-right: 1%;
 }
 #buttonsDiv{
     float: right;
@@ -107,7 +117,7 @@
 }
 
 #commentsDiv{
-    max-height: 760px;
+    max-height: 735px;
     overflow: scroll;
     width: 100%;
     border-radius: 5px;
@@ -144,6 +154,11 @@
 #commentOwner{
     font-weight: 600;
     margin-right: 5px;
+    text-decoration: none;
+    color: dimgray;
+}
+#commentOwner:hover{
+    color: black;
 }
 #commentDate{
     font-size: 10px; 
@@ -162,8 +177,11 @@
 #myFormButton{
     display:block;
     margin: 0 auto 10px auto;
+    
 }
-
+#btnFollow{
+    margin-right: 1%;
+}
 #myCommentButton,#hideShowBtn{
     display: inline-block;
     vertical-align: middle;
@@ -174,14 +192,40 @@
     margin: 5px 0;
 }
 #recommendedVideos .row{
-    
     max-height: auto;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 10px auto;
     
 }
 #recommendedVideos .row a{
-    
     text-decoration: none;
     color: black;
+}
+#recommendedVideos h4{
+    margin-left: 1%;
+}
+#imgFormat{
+    height: 140px;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+#imgFormat:hover{
+    opacity: 1;
+}
+#reportModal,#blockModal,#deleteModal{
+    text-align: left;
+}
+.pagination{
+    margin-left: 25%;
     
+}
+.pagination li a{
+    border-color: silver;
+    color: dimgray;
+}
+.pagination .active a{
+    color: white;
+    background-color: red;
+}
+.pagination .active a:hover{
+    background-color: darkred;
 }

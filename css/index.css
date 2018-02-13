@@ -1,22 +1,10 @@
 .mainDiv{
     width: 60%;
-    margin-top: 5%;
+    margin-top: 70px;
     display: inline-block;
     text-align: left;
-}
-.col-md-4 a{
-    color:black;
-    text-decoration: none;
-}
-.row{
-    margin-top: 20px;
-}
-.rowHeader h3,h4{
-    display: inline-block;
-    vertical-align: top;
-    line-height: 80px;
-    margin:0;
-    padding:0;
+    min-height: 800px;
+    margin-bottom: 30px;
 }
 .mainDiv h4{
     float: right;
@@ -26,10 +14,9 @@
 .mainDiv h4 a{
     color: black;
     text-decoration: none;
-    
 }
-#stats{
-    color: dimgrey;
+#videoInfo{
+    color: dimgray;
     font-size: 12px;
 }
 #titleBar{
@@ -37,49 +24,96 @@
     font-weight: 500;
     font-size: 15px;
 }
-#imgFormat{
+#videoImage{
     height: 30vh;
+    border-radius: 5px;
 }
 @media only screen and (max-width: 1200px) {
-    #imgFormat{
+    #videoImage{
         height: 22vh;
     }
+
 }
 @media only screen and (max-width: 990px) {
-    #imgFormat{
-        height: 50vh;
+    #videoImage{
+        height: 53vh;
     }
 }
 @media only screen and (max-width: 750px) {
-    #imgFormat{
-        height: 40vh;
+
+    #profileImage{
+        transform: scale(0.9);
+    }
+    .mainDiv{
+        width: 70%;
     }
 }
 @media only screen and (max-width: 600px) {
-    #imgFormat{
-        height: 35vh;
+
+    .mainDiv h4{
+        float: none;
+        margin: 0 auto;
+    }
+    .mainDiv{
+        width: 75%;
     }
 }
 @media only screen and (max-width: 500px) {
-    #imgFormat{
-        height: 30vh;
+    #videoImage{
+        height: 38vh;
+    }
+    .mainDiv{
+        width: 80%;
     }
 }
 @media only screen and (max-width: 400px) {
-    #imgFormat{
-        height: 25vh;
+    #videoImage{
+        height: 35vh;
     }
 }
 @media only screen and (max-width: 320px) {
-    #imgFormat{
-        height: 20vh;
+    #videoImage{
+        height: 30vh;
     }
 }
-#popularChannels{
-    margin-bottom: 45px;
+
+#profileName, #videoInfo{
+    color: black;
+    text-decoration: none;
 }
+#videoInfo{
+    color: dimgray;
+    text-decoration: none;
+}
+.rowOne a, .rowTwo a,.row a{
+    color: black;
+    text-decoration: none;
+}
+
 hr{
     clear: right;
     margin: 0;
     padding: 0;
+}
+#popularChannels{
+    margin-bottom: 45px;
+    text-align: center;
+}
+#popularChannels h4{
+    text-align: left;
+}
+#profileImage{
+    border-radius: 50%;
+}
+#profileImage:hover{
+    transform: scale(1.05);
+}
+.col-md-4, .col-md-2{
+    padding: 25px 5px;
+}
+#channelName{
+    color: dimgray;
+}
+#channelName:hover{
+    color: black;
 }

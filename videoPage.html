@@ -27,21 +27,21 @@
 
                 <div class="collapse navbar-collapse" id="toggleMenu">
                     <ul class="nav navbar-nav">
-                        <li><a href="#"><span class="glyphicon glyphicon-fire"></span> Trending</a></li>
+                        <li><a href="trendingPage.html"><span class="glyphicon glyphicon-fire"></span> Trending</a></li>
                     </ul>
                 
-                    <form class="navbar-form navbar-left" role="search" action="#">
+                    <form class="navbar-form navbar-left" role="search" action="searchPage.html">
                         <div class="form-group-sm">
-                            <div class="input-group" id="searchBar">
-                                <input type="text" class="form-control" placeholder="Search" autocomplete="off">
-                                <span class="input-group-btn"><button class="btn btn-danger btn-sm">Submit</button></span>
+                            <div class="input-group" id="searchBarNav">
+                                <input type="text" class="form-control" placeholder="Search" autocomplete="off" id="searchParameter">
+                                <span class="input-group-btn"><button class="btn btn-danger btn-sm" id="searchSubmit">Submit</button></span>
                             </div>
                         </div>
                     </form>
                 
                     <ul class="nav navbar-nav navbar-right" id="navbarNotLoggedIn">
-                        <li><a href="#" onclick="loginWindow()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                        <li><a  data-toggle="modal" href="#login-modal" ><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a  data-toggle="modal" href="#register-modal"><span class="glyphicon glyphicon-user" ></span> Register</a></li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-cog"></span> Options</a>
                             <ul class="dropdown-menu">
@@ -52,15 +52,15 @@
                   
                     <ul class="nav navbar-nav navbar-right" id="navbarLoggedIn">
                         <li><a href="#"><span class="glyphicon glyphicon-upload"></span> Upload</a></li>
-                        <li class="dropdown" id="test">
+                        <li class="dropdown">
                             <!-- Link koji otvara dropdown listu -->
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="userNameTab"></a>
                             <!-- Lista koja se pojavljuje i sakriva na klik -->
                             <ul class="dropdown-menu" id="mainDropdown">
-                                <li><a href="#" target="_blank" id="users"><span class="glyphicon glyphicon-user"></span> Users</a></li>
-                                <li><a href="#" target="_blank"><span class="glyphicon glyphicon-eye-open"></span> My Channel</a></li>
-                                <li><a href="#" target="_blank"><span class="glyphicon glyphicon-time"></span> History</a></li>
-                                <li><a href="#" target="_blank"><span class="glyphicon glyphicon-thumbs-up"></span> Liked</a></li>
+                                <li><a href="usersPage.html" target="_self" id="users"><span class="glyphicon glyphicon-user"></span> Users</a></li>
+                                <li><a href="channelPage.html" target="_self"><span class="glyphicon glyphicon-eye-open"></span> My Channel</a></li>
+                                <li><a href="searchPage.html" target="_self"><span class="glyphicon glyphicon-time"></span> History</a></li>
+                                <li><a href="searchPage.html" target="_self"><span class="glyphicon glyphicon-thumbs-up"></span> Liked</a></li>
                                 <li><a data-toggle="collapse" href="#playlists" id="playlistCollapse"><span class="glyphicon glyphicon-th-list"></span> Playlists<span class="caret"></span></a>
                                     <ul id="playlists" class="panel-collapse collapse itemInListCollapse">
                                         <li class="list-group-item"><a href="#">Javascript step by step</a></li>
@@ -73,12 +73,12 @@
                                 </li>
                                 <li><a data-toggle="collapse" href="#following" id="followingCollapse"><span class="glyphicon glyphicon-king"> </span> Following<span class="caret"></span></a>
                                     <ul id="following" class="panel-collapse collapse itemInListCollapse list-group">
-                                        <li class="list-group-item"><a href="#">thenewboston</a></li>
-                                        <li class="list-group-item"><a href="#">Eminem</a></li>
-                                        <li class="list-group-item"><a href="#">AC/DC</a></li>
-                                        <li class="list-group-item"><a href="#">LifeHacks</a></li>
-                                        <li class="list-group-item"><a href="#">FailArmy</a></li>
-                                        <li class="list-group-item"><a href="#">Eminem</a></li>
+                                        <li class="list-group-item"><a href="channelPage.html">thenewboston</a></li>
+                                        <li class="list-group-item"><a href="channelPage.html">Eminem</a></li>
+                                        <li class="list-group-item"><a href="channelPage.html">AC/DC</a></li>
+                                        <li class="list-group-item"><a href="channelPage.html">LifeHacks</a></li>
+                                        <li class="list-group-item"><a href="channelPage.html">FailArmy</a></li>
+                                        <li class="list-group-item"><a href="channelPage.html">Eminem</a></li>
                                     </ul>
                                 </li>   
                             </ul>
@@ -97,26 +97,57 @@
                 </div>
             </div>
         </nav>
-        <div class="loginWindow">
-            <form class="modal-content animate" action="index.html" method="post" id="loginForm">
-                <div class="modal-header">
-                    <h4 ><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        <div class="modal fade" id="login-modal">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Login Form</h3>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-header">
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="username" name="uname" id="usernameLogin" class="form-control" placeholder="Username" required/>
+                                <input type="password" name="passw" id="passwordLogin" class="form-control" placeholder="Password" required/>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- footer -->
+                    <div class="modal-footer">
+                        <button class="btn btn-danger btn-block" id="logInSubmit">Log In</button>
+                        <p>Or</p>
+                        <button class="btn btn-default btn-block" data-toggle="modal" href="#register-modal" data-dismiss="modal">Register</button>
+                    </div>
+
                 </div>
-                <div class="form-group">
-                    <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
-                    <input type="text" class="form-control"  name="uname" id="userNameInput" placeholder="Enter Username" autocomplete="off">
+            </div>
+        </div>
+        <div class="modal fade" id="register-modal">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <!-- header -->
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Register Form</h3>
+                    </div>
+                    <!-- body -->
+                    <div class="modal-header">
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" name="uname" id="usernameRegister" class="form-control" placeholder="Username" required/>
+                                <input type="password" name="passw" id="passwordRegister" class="form-control" placeholder="Password" required/>
+                                <input type="text" name="email" id="emailRegister" class="form-control" placeholder="Email" required/>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- footer -->
+                    <div class="modal-footer">
+                        <button class="btn btn-danger btn-block" id="registerSubmit">Register</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
-                    <input type="password" class="form-control" name="passw" id="passwordInput" placeholder="Enter Password" autocomplete="off">
-                </div>
-                
-                <p>Not a member? <a href="#">Sign Up</a></p>
-                <p>Forgot <a href="#">Password?</a></p>
-                <button type="submit" id="logInSubmit" class="btn btn-danger">Login</button>
-                <button type="reset" onclick="loginWindow()" class="btn btn-secondary">Close</button>
-                <br>
-            </form>
+            </div>
         </div>
         <div class="modal fade" id="badLoginModal" role="dialog">
             <div class="modal-dialog">
@@ -148,16 +179,55 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="reportModal" role="dialog" >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+                    </div>
+                    <div class="modal-body">Select "Report" below if you are want to report this video.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-danger" href="index.html" data-dismiss="modal">Report</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="blockModal" role="dialog" >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+                    </div>
+                    <div class="modal-body">Select "Block" below if you are want to block this video.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-danger" href="index.html">Block</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="deleteModal" role="dialog" >
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+                    </div>
+                    <div class="modal-body">Select "Delete" below if you are want to delete this video.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-danger" href="index.html">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="mainDiv">
             <div class="row">
-                <div class="col-md-8 col-sm-12">
+                <div class="col-md-8 col-sm-12 thumbnail">
                     <div class="videoAndControl thumbnail">
-                        <iframe id="videoPlayer" width="100%" height="430" src="https://www.youtube.com/embed/A6j7mUxGz20?  autoplay=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
-                        <div class="controlBar">
-                            <a href="#" onclick="pause()">PAUSE</a>
-                        </div>
+                        <iframe id="videoPlayer" width="100%" height="430" src="https://www.youtube.com/embed/so2s-NZVXZA?  autoplay=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
                     </div>
-                    <div class="videoInfo">
+                    <div class="videoInfo ">
                         <h4>Phasellus sapien risus, suscipit ut faucibus in, posuere vitae est. Mauris sit amet est finibus, vehicula velit nec, maximus tellus.</h4>
                         <div class="viewsAndButton">
                             <p class="viewsCounter">Views:1000000000</p>
@@ -171,19 +241,25 @@
                             <div class="btn-group" id="optionsBtnGroup">
                                 <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-share-alt"></span> Share</button>
                                 <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
-                                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-option-horizontal"></span></button>
+                                <button type="button" class="dropdown-toggle btn btn-default" data-toggle="dropdown" ><span class="glyphicon glyphicon-option-horizontal"></span></button>
+                                <ul class="dropdown-menu" >
+                                    <li id="deleteOptionVideo"><a href="#deleteModal" data-toggle="modal">Delete video</a></li>
+                                    <li><a href="#blockModal" data-toggle="modal">Block video</a></li>
+                                    <li><a href="#reportModal" data-toggle="modal">Report video</a></li>
+                                    <li><a href="#">Add to playlist</a></li>
+                                </ul>
                             </div>
                         </div>
 
-                        <div class="description">
-                            <a href="#"><img src="pictures/1.jpg" alt="Lights" style="width:70px;height: 70px"></a>
+                        <div class="description ">
+                            <a href="channelPage.html"><img src="pictures/1.jpg" alt="Lights" style="width:70px;height: 70px"></a>
                             <ul id="nameAndDate">
-                                <li><a href="#" >Test Name</a></li>
+                                <li><a href="channelPage.html" >Test Name</a></li>
                                 <li><p>Published on<br>22.2.2222.</p></li>
                             </ul>
                             <button id="btnFollow" type="button" class="btn btn-danger">Follow</button>
                             
-                            <p class="thumbnail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis est lectus, luctus nec est vitae, hendrerit volutpat dui. Vivamus in lacinia elit. Pellentesque convallis congue tempor. Phasellus luctus arcu ac risus tempor, id scelerisque lacus lacinia. Maecenas a dolor maximus, rutrum augue ut, sodales augue. Vestibulum id tellus non erat interdum volutpat hendrerit a ante. Donec eget dui eget enim condimentum scelerisque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis est lectus, luctus nec est vitae, hendrerit volutpat dui. Vivamus in lacinia elit. Pellentesque convallis congue tempor. Phasellus luctus arcu ac risus tempor, id scelerisque lacus lacinia. Maecenas a dolor maximus, rutrum augue ut, sodales augue. Vestibulum id tellus non erat interdum volutpat hendrerit a ante. Donec eget dui eget enim condimentum scelerisque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis est lectus, luctus nec est vitae, hendrerit volutpat dui. Vivamus in lacinia elit. Pellentesque convallis congue tempor. Phasellus luctus arcu ac risus tempor, id scelerisque lacus lacinia. Maecenas a dolor maximus, rutrum augue ut, sodales augue. Vestibulum id tellus non erat interdum volutpat hendrerit a ante. Donec eget dui eget enim condimentum scelerisque.</p>
+                            <p class="thumbnail" id="textDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis est lectus, luctus nec est vitae, hendrerit volutpat dui. Vivamus in lacinia elit. Pellentesque convallis congue tempor. Phasellus luctus arcu ac risus tempor, id scelerisque lacus lacinia. Maecenas a dolor maximus, rutrum augue ut, sodales augue. Vestibulum id tellus non erat interdum volutpat hendrerit a ante. Donec eget dui eget enim condimentum scelerisque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis est lectus, luctus nec est vitae, hendrerit volutpat dui. Vivamus in lacinia elit. Pellentesque convallis congue tempor. Phasellus luctus arcu ac risus tempor, id scelerisque lacus lacinia. Maecenas a dolor maximus, rutrum augue ut, sodales augue. Vestibulum id tellus non erat interdum volutpat hendrerit a ante. Donec eget dui eget enim condimentum scelerisque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis est lectus, luctus nec est vitae, hendrerit volutpat dui. Vivamus in lacinia elit. Pellentesque convallis congue tempor. Phasellus luctus arcu ac risus tempor, id scelerisque lacus lacinia. Maecenas a dolor maximus, rutrum augue ut, sodales augue. Vestibulum id tellus non erat interdum volutpat hendrerit a ante. Donec eget dui eget enim condimentum scelerisque.</p>
                         </div>
                     </div>
                 </div>
@@ -194,7 +270,7 @@
                             <select id="commSelect" onchange="refreshComments()">
                                 <option value="10">10 comments</option>
                                 <option value="20">20 comments</option>
-                                <option value="25">50 comments</option>
+                                <option value="50">50 comments</option>
                             </select>
                         </div>
                         <div id="centerButtons">
@@ -228,10 +304,18 @@
                             </div>
                                 -->
                             </div> 
+                            <ul class="pagination">
+                                <li class="active firstPage" id="paginationItem"><a href="#">1</a></li>
+                                <li id="paginationItem"><a href="#">2</a></li>
+                                <li id="paginationItem"><a href="#">3</a></li>
+                                <li id="paginationItem"><a href="#">4</a></li>
+                                <li id="paginationItem"><a href="#">5</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-12 col-sm-12" id="recommendedVideos">
+                    <h4>Recommended</h4>
                     <div class="row">
                         
                     </div>

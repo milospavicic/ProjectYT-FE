@@ -1,4 +1,7 @@
 $('document').ready(function(e){
+    if(localStorage.getItem("userMode")=="false"){
+        window.location.href = "index.html";
+    }
     showChannels();
     
     $('#btnFollow0').click(function() {

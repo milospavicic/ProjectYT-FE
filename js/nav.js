@@ -96,6 +96,11 @@ function loginStatus(){
             $('#deleteOptionVideo').hide();
             $('#deleteOptionChannel').hide();
         }
+    }else{
+        var usersTabInDropdown = document.getElementById("users");
+        usersTabInDropdown.style.display = "none";
+        $('#deleteOptionVideo').hide();
+        $('#deleteOptionChannel').hide(); 
     }
 }
 function loginWindow(){
